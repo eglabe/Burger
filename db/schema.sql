@@ -10,6 +10,7 @@ CREATE TABLE `burgers`
     `burger_name` VARCHAR(255) NOT NULL,
     `devoured` BOOLEAN DEFAULT false,
     `date` DATETIME,
-    PRIMARY KEY ('id')
+    PRIMARY KEY (`id`)
 );
 
+SELECT * FROM `burgers`;

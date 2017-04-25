@@ -2,16 +2,16 @@
 var connection = require("./connection.js");
 
 var orm = {
-    selectAll(): function() {
+    selectAll: function() {
 
     },
 
-    insertOne(): function() {
+    insertOne: function() {
 
     },
 
-    updateOne(): function() {
-        
+    updateOne: function() {
+
     }
 
 };

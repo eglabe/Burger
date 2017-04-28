@@ -1,5 +1,3 @@
-// Create a button that will submit the user input into the database.
-
 <h1>Eat Da Burger!</h1>
 
 <h2>Menu</h2>
@@ -8,11 +6,11 @@
   {{#each burgers}}
     {{#unless this.devoured}}
       <li>
-        {{this.name}}
+        {{this.burger_name}}
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="true">
-          <button type="submit">SLEEP TIME!</button>
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit">Devour!</button>
         </form>
       </li>
     {{/unless}}
@@ -25,12 +23,8 @@
   {{#each burgers}}
     {{#if this.devoured}}
       <li>
-        {{this.name}}
+        {{this.burger_name}}
 
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="false">
-          <button type="submit">WAKE UP!</button>
-        </form>
       </li>
     {{/if}}
   {{/each}}
@@ -41,7 +35,7 @@
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="burg" name="name">
+    <input type="text" id="burg" name="burgerName">
   </div>
 
   <button type="submit">Add Burger</button>

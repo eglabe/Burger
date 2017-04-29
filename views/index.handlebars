@@ -10,7 +10,7 @@
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="true">
-          <button type="submit">Devour!</button>
+          <button class="btn btn-default btn-sm" type="submit">Devour!</button>
         </form>
       </li>
     {{/unless}}
@@ -38,5 +38,5 @@
     <input type="text" id="burg" name="burgerName">
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button class="btn btn-default" type="submit">Add Burger</button>
 </form>

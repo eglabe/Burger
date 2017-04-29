@@ -18,5 +18,24 @@ connection.connect(function(err) {
     console.log("connected as id " + connection.threadId);
 });
 
+// mysql://b6a949eeaacc4b:436dde75@us-cdbr-iron-east-03.cleardb.net/heroku_11a0b2e449385f1?reconnect=true
+
+// // **************   HEROKU connection **************
+// var connection = mysql.createPool({
+//     host: "us-cdbr-iron-east-03.cleardb.net",
+//     user: "b6a949eeaacc4b",
+//     password: "436dde75",
+//     database: "heroku_11a0b2e449385f1",
+//     connectionLimit: 5
+// });
+
+connection.getConnection(function(err) {
+    if (err) {
+        console.error(“error connecting: ” + err.stack);
+        return;
+    }
+    console.error(“Connected to : ” + connection.threadId);
+});
+
 // Exports the connection for use in other files
 module.exports = connection;

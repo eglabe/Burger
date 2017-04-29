@@ -29,13 +29,5 @@ connection.connect(function(err) {
 //     connectionLimit: 5
 // });
 
-connection.getConnection(function(err) {
-    if (err) {
-        console.error(“error connecting: ” + err.stack);
-        return;
-    }
-    console.error(“Connected to : ” + connection.threadId);
-});
-
 // Exports the connection for use in other files
 module.exports = connection;
